@@ -8,7 +8,7 @@ class TranslateNamePipeline(object):
     def open_spider(self,spider):
         # self.file = open('items.jl', 'wb')
         password = urllib.quote_plus('1qaz@WSX')
-        uri = "mongodb://chenguser:"+password+"/127.0.0.1/chengdb?authMechanism=SCRAM-SHA-1:27017"
+        uri = "mongodb://chenguser:"+password+"@127.0.0.1/chengdb?authMechanism=SCRAM-SHA-1:27017"
         client = MongoClient(uri)
         self.db = client.chengdb
 
