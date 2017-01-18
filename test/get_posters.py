@@ -23,4 +23,4 @@ for content in db.cleancontent.find():
             "large": data['subjects'][0]['images']['large']
         }
         db.contentimages.insert_one(image_rec)
-    time.sleep(2)
+    time.sleep(20)
